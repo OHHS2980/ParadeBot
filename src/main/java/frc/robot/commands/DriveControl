@@ -1,0 +1,34 @@
+public class DriveControl extends Command {
+  Drive mDrive;
+  DoubleSupplier XSpeed;
+  DoubleSupplier Rotation;
+
+  /** Creates a new DriveController. */
+  public DriveController(Drive mDrive, DoubleSupplier XSpeed, DoubleSupplier Rotation) {
+    this.mDrive = mDrive;
+    this.XSpeed = XSpeed;
+    this.Rotation = Rotation;
+  }
+
+  // Called when the command is initially scheduled.
+  @Override
+  public void initialize() {}
+
+  // Called every time the scheduler runs while the command is scheduled.
+  @Override
+  public void execute() {
+    double xval = XSpeed.getAsDouble() * Constants.DriveSpeed;
+    double rotationval = Rotation.getAsDouble() * Constants.DriveConstansts.DriveSpeed;
+    Drive.drive(xval, rotationval);
+  }
+
+  // Called once the command ends or is interrupted.
+  @Override
+  public void end(boolean interrupted) {}
+
+  // Returns true when the command should end.
+  @Override
+  public boolean isFinished() {
+    return false;
+  }
+}
