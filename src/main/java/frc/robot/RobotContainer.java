@@ -12,6 +12,3 @@ public class RobotContainer {
     drive.setDefaultCommand(new DriveControl(drive.differentialDrive, () -> driverController.getLeftY(), () -> driverController.getRightX()));
   }
 }
-
-
-

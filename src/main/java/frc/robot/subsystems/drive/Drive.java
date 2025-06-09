@@ -2,10 +2,10 @@
 // Open Source Software; you can modify and/or share it under the terms of
 // the WPILib BSD license file in the root directory of this project.
 
+//also we dont need like most of these imports so if someone wants they can kill these!!! uwu
 package frc.robot.subsystems;
 
 import frc.robot.Constants;
-
 
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
