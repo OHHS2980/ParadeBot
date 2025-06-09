@@ -27,20 +27,18 @@ import edu.wpi.first.wpilibj.motorcontrol.Talon;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class Drive extends SubsystemBase {
-  public static WPI_TalonSRX RightDriver = new WPI_TalonSRX(Constants.rightDriverCanID);
-  public static WPI_TalonSRX RightPassenger = new WPI_TalonSRX(Constants.rightPassengerCanID);
-  public static WPI_TalonSRX LeftDriver = new WPI_TalonSRX(Constants.leftDriverCanID);
-  public static WPI_TalonSRX LeftPassenger = new WPI_TalonSRX(Constants.leftPassengerCanID);
+  public static WPI_TalonSRX RightSenpai = new WPI_TalonSRX(Constants.rightSenpaiCanID);
+  public static WPI_TalonSRX RightKohai = new WPI_TalonSRX(Constants.rightKohaiCanID);
+  public static WPI_TalonSRX LeftSenpai = new WPI_TalonSRX(Constants.leftSenpaiCanID);
+  public static WPI_TalonSRX LeftKohai = new WPI_TalonSRX(Constants.leftKohaiCanID);
 
-  private static DifferentialDrive mDrive = new DifferentialDrive(LeftDriver, RightDriver);
-
-  DifferentialDriveKinematics mkinematics = new DifferentialDriveKinematics(Units.inchesToMeters(24));
+  private static DifferentialDrive mDrive = new DifferentialDrive(LeftSenpai, RightSenpai);
 
   public Drive() {
-    RightPassenger.follow(RightDriver);
-    LeftPassenger.follow(LeftDriver);
-    LeftDriver.setInverted(true);
-    LeftPassenger.setInverted(true);  
+    RightKohai.follow(RightSenpai);
+    LeftKohai.follow(LeftSenpai);
+    LeftSenpai.setInverted(true);
+    LeftKohai.setInverted(true);  
     }
   
   public static void drive (double XSpeed, double Rotation) {
