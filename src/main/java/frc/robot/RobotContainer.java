@@ -9,7 +9,7 @@ public class RobotContainer {
 
   public RobotContainer() {
     // Configure the trigger bindings
-    drive.setDefaultCommand(new DriveControl(drive, () -> driverController.getLeftY(), () -> driverController.getRightX()));
+    drive.setDefaultCommand(new DriveControl(drive.differentialDrive, () -> driverController.getLeftY(), () -> driverController.getRightX()));
   }
 }
 

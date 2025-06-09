@@ -28,7 +28,7 @@ public class Drive extends SubsystemBase {
   public static WPI_TalonSRX LeftSenpai = new WPI_TalonSRX(Constants.leftSenpaiCanID);
   public static WPI_TalonSRX LeftKohai = new WPI_TalonSRX(Constants.leftKohaiCanID);
 
-  private static DifferentialDrive mDrive = new DifferentialDrive(LeftSenpai, RightSenpai);
+  private static DifferentialDrive differentialDrive = new DifferentialDrive(LeftSenpai, RightSenpai);
 
   public Drive() {
     RightKohai.follow(RightSenpai);
@@ -36,8 +36,4 @@ public class Drive extends SubsystemBase {
     LeftSenpai.setInverted(true);
     LeftKohai.setInverted(true);  
     }
-  
-  public static void drive (double XSpeed, double Rotation) {
-    mDrive.arcadeDrive(XSpeed, Rotation);
-  } 
 }
