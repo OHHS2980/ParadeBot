@@ -4,6 +4,8 @@ import java.util.function.DoubleSupplier;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
 
+import frc.robot.Constants;
+
 import edu.wpi.first.wpilibj.examples.hatchbottraditional.subsystems.DriveSubsystem;
 
 /**
@@ -26,6 +28,6 @@ public class DefaultDrive extends CommandBase {
 
   @Override
   public void execute() {
-    drive.arcadeDrive(forward.getAsDouble(), rotation.getAsDouble());
+    drive.arcadeDrive(forward.getAsDouble() * Constants.speed, rotation.getAsDouble() * Constants.speed);
   }
 }

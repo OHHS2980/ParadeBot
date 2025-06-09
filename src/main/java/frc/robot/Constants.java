@@ -5,7 +5,7 @@ public class Constants {
     public static final int leftKohaiCanID = 1;
     public static final int rightSenpaiCanID = 2;
     public static final int rightKohaiCanID = 3;
-    public static int speed = 1
+    public static double speed = 1
 
     public enum BloodType = {
         A,

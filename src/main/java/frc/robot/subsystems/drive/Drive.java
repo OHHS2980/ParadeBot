@@ -18,15 +18,15 @@ import edu.wpi.first.math.kinematics.Kinematics;
 import edu.wpi.first.math.util.Units;
 import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
-import edu.wpi.first.wpilibj.motorcontrol.Spark;
+import edu.wpi.first.wpilibj.motorcontrol.SparkMax;
 import edu.wpi.first.wpilibj.motorcontrol.Talon;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class Drive extends SubsystemBase {
-  public static WPI_TalonSRX RightSenpai = new WPI_TalonSRX(Constants.rightSenpaiCanID);
-  public static WPI_TalonSRX RightKohai = new WPI_TalonSRX(Constants.rightKohaiCanID);
-  public static WPI_TalonSRX LeftSenpai = new WPI_TalonSRX(Constants.leftSenpaiCanID);
-  public static WPI_TalonSRX LeftKohai = new WPI_TalonSRX(Constants.leftKohaiCanID);
+  public static WPI_TalonSRX RightSenpai = new SparkMax(Constants.rightSenpaiCanID);
+  public static WPI_TalonSRX RightKohai = new SparkMax(Constants.rightKohaiCanID);
+  public static WPI_TalonSRX LeftSenpai = new SparkMax(Constants.leftSenpaiCanID);
+  public static WPI_TalonSRX LeftKohai = new SparkMax(Constants.leftKohaiCanID);
 
   private static DifferentialDrive differentialDrive = new DifferentialDrive(LeftSenpai, RightSenpai);
 
