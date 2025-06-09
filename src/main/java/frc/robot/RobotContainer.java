@@ -1,3 +1,6 @@
+
+import frc.robot.commands.DriveControl;
+
 public class RobotContainer {
   private final Drive drive = new Drive();  
 
@@ -6,7 +9,7 @@ public class RobotContainer {
 
   public RobotContainer() {
     // Configure the trigger bindings
-    drive.setDefaultCommand(new DriveController(drive, () -> driverController.getLeftY(), () -> driverController.getRightX()));
+    drive.setDefaultCommand(new DriveControl(drive, () -> driverController.getLeftY(), () -> driverController.getRightX()));
   }
 }
 
